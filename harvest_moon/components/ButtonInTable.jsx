@@ -23,7 +23,7 @@ const ButtonInTable = ({buttonText, size, popupMessage}) => {
 
   return (
     <div className="mx-2 my-8 rounded-3xl border border-black button_bg ${buttonSize} transition-all font-inter
-    hover:bg-yellow hover:text-white text-center text-xl flex items-center justify-center">
+    hover:bg-yellow hover:text-black text-center text-xl flex items-center justify-center">
         <button onClick={handleClick}>{buttonText}</button>
         {showPopup && <Popup message={popupMessage} />}
     </div>
