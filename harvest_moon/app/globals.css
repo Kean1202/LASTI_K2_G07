@@ -61,6 +61,19 @@ Red: 255, 88, 88
   opacity: 0.15;
 }
 
+/* Untuk Popup */
+.popup {
+  position: fixed;
+  top: 20px; /* Sesuaikan posisi vertikal */
+  left: 50%; /* Untuk menengahkan pop-up */
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid black;
+  padding: 20px;
+  z-index: 999; /* Pastikan z-index lebih tinggi dari elemen lain */
+}
+
+
 .app {
   @apply relative z-10 flex justify-center items-center flex-col max-w-full ;
 }

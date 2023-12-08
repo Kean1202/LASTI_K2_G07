@@ -2,6 +2,7 @@
 
 import {Table, TableHeader, TableBody, TableColumn, TableRow, TableCell, getKeyValue } from "@nextui-org/react";
 import React, {useEffect, useState} from "react";
+import ButtonInTable from "@/components/ButtonInTable";
 
 
 const HamaTable = () => {
@@ -26,14 +27,24 @@ const HamaTable = () => {
             key: "1",
             cluster_tanaman: "A",
             kondisi_hama: "Safe",
-            action_hama: "Taroh button di sini"
+            action_hama:
+            <ButtonInTable
+                buttonText={"Warn"}
+                size="small"
+                popupMessage={"Peringatan telah dikirim kepada petani penanggung jawab cluster A"}
+            />
         },
 
         {
             key: "2",
             cluster_tanaman: "B",
             kondisi_hama: "Critical",
-            action_hama: "Taroh button di sini"
+            action_hama:
+            <ButtonInTable
+                buttonText={"Warn"}
+                size="small"
+                popupMessage={"Peringatan telah dikirim kepada petani penanggung jawab cluster B"}
+            />
         },
 
 
