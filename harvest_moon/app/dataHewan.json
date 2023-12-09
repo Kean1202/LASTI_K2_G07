@@ -2,7 +2,7 @@
     "dataHewan" : [
         {
             "id" : "1",
-            "jenis_hewan" : "Afton",
+            "jenis_hewan" : "Sapi",
             "kondisi_hewan" : "Healthy",
             "siklus_hewan" : "1"
         },
