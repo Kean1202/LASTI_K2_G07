@@ -1,7 +1,8 @@
 "use client"
 
-import {Table, TableHeader, TableBody, TableColumn, TableRow, TableCell, getKeyValue } from "@nextui-org/react";
+import {Table, TableHeader, TableBody, TableColumn, TableRow, TableCell, getKeyValue,  } from "@nextui-org/react";
 import React, {useEffect, useState} from "react";
+import ButtonInTable from "@/components/ButtonInTable";
 
 
 const PertumbuhanTable = () => {
@@ -31,7 +32,12 @@ const PertumbuhanTable = () => {
             cluster_tanaman: "A",
             kelembapan_tanaman: "75 %",
             nutrisi_tanaman: "Optimal",
-            action_tanaman: "Taroh button di sini"
+            action_tanaman: 
+            <ButtonInTable
+                buttonText={"Irigate"}
+                size="small"
+                popupMessage={"Lakukan Irigasi"}
+            />
         },
 
         {
@@ -39,7 +45,12 @@ const PertumbuhanTable = () => {
             cluster_tanaman: "B",
             kelembapan_tanaman: "45 %",
             nutrisi_tanaman: "Suboptimal",
-            action_tanaman: "Taroh button di sini"
+            action_tanaman: 
+            <ButtonInTable
+                buttonText={"Irigate"}
+                size="small"
+                popupMessage={"Lakukan Irigasi"}
+            />
         },
 
         {
@@ -47,7 +58,12 @@ const PertumbuhanTable = () => {
             cluster_tanaman: "C",
             kelembapan_tanaman: "55 %",
             nutrisi_tanaman: "Critical",
-            action_tanaman: "Taroh button di sini"
+            action_tanaman: 
+            <ButtonInTable
+                buttonText={"Irigate"}
+                size="small"
+                popupMessage={"Lakukan Irigasi"}
+            />
         },
     ]
 
@@ -56,12 +72,12 @@ const PertumbuhanTable = () => {
     return (
         <Table aria-label="Tabel Pertumbuhan Tanaman" align="center" shadow="md" isStriped>
             <TableHeader columns={columns}>
-                    {(column) => <TableColumn key={column.key}  className="green_gradient font-bold">{column.label}</TableColumn>}
+                    {(column) => <TableColumn key={column.key}  className="green_gradient font-bold" style={{backgroundColor: '#b0dcbc'}}>{column.label}</TableColumn>}
             </TableHeader>
             <TableBody items={rows}>
                 {(item) => (
                     <TableRow key={item.key} align="center">
-                            {(columnKey) => <TableCell className="font-inter">{getKeyValue(item, columnKey)}</TableCell>}
+                            {(columnKey) => <TableCell className="font-inter text-center">{getKeyValue(item, columnKey)}</TableCell>}
                     </TableRow>
                 )}
             </TableBody>
