@@ -1,0 +1,22 @@
+{
+    "dataHewan" : [
+        {
+            "id" : "1",
+            "jenis_hewan" : "Sapi",
+            "kondisi_hewan" : "Healthy",
+            "siklus_hewan" : "1"
+        },
+        {
+            "id" : "2",
+            "jenis_hewan" : "Sapi",
+            "kondisi_hewan" : "Sick",
+            "siklus_hewan" : "0"
+        },
+        {
+            "id" : "3",
+            "jenis_hewan" : "Ayam",
+            "kondisi_hewan" : "Healthy",
+            "siklus_hewan" : "2"
+        }
+    ]
+}
