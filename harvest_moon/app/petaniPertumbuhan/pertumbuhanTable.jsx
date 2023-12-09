@@ -2,7 +2,7 @@
 
 import {Table, TableHeader, TableBody, TableColumn, TableRow, TableCell, getKeyValue,  } from "@nextui-org/react";
 import React, {useEffect, useState} from "react";
-
+import Popup from "@/components/Popup";
 
 const PertumbuhanTable = (props) => {
     const [data, setData] = useState(props.dataTanaman);
@@ -39,7 +39,7 @@ const PertumbuhanTable = (props) => {
           action_func(id); 
           setShowPopup(true);
           setTimeout(() => {
-            setShowPopup(false);
+          setShowPopup(false);
           }, 3000);
         };
       
