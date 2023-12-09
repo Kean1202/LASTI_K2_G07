@@ -2,7 +2,8 @@ import Image from 'next/image'
 import MainButton from "@/components/MainButton"
 import PertumbuhanTable from './pertumbuhanTable'
 
-export default function Home() {
+export default async function Home() {
+
   return (
     <div className="flex flex-col max-w-full items-center mx-auto">
       <h1 className="headline_text gradient_green justify-center"> Kondisi Pertumbuhan Tanaman </h1>
@@ -10,6 +11,5 @@ export default function Home() {
         <PertumbuhanTable/>
       </div>
     </div>
-    
   )
 }

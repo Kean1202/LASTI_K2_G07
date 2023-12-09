@@ -1,0 +1,25 @@
+{
+    "dataTanaman" : [
+        {
+            "id" : "1",
+            "Cluster" : "A",
+            "Kelembapan" : 75,
+            "Nutrisi" : "Optimal",
+            "Kondisi" : "Safe"
+        },
+        {
+            "id" : "2",
+            "Cluster" : "B",
+            "Kelembapan" : 45,
+            "Nutrisi" : "SubOptimal",
+            "Kondisi" : "Critical"
+        },
+        {
+            "id" : "3",
+            "Cluster" : "C",
+            "Kelembapan" : 55,
+            "Nutrisi" : "Critical",
+            "Kondisi" : "Moderate"
+        }
+    ]
+}
