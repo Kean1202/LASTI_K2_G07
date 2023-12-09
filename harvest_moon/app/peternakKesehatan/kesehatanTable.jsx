@@ -2,6 +2,7 @@
 
 import {Table, TableHeader, TableBody, TableColumn, TableRow, TableCell, getKeyValue } from "@nextui-org/react";
 import React, {useEffect, useState} from "react";
+import ButtonInTable from "@/components/ButtonInTable";
 
 
 const KesehatanTable = () => {
@@ -32,7 +33,12 @@ const KesehatanTable = () => {
             ID_hewan: "001",
             jenis_hewan: "Sapi",
             kondisi_hewan: "Healthy",
-            action_hewan: "Taroh button di sini"
+            action_hewan: 
+            <ButtonInTable
+                buttonText={"Obati"}
+                size="small"
+                popupMessage={"Peternak Melakukan Pengobatan"}
+            />
         },
 
         {
@@ -40,7 +46,12 @@ const KesehatanTable = () => {
             ID_hewan: "002",
             jenis_hewan: "Sapi",
             kondisi_hewan: "Sick",
-            action_hewan: "Taroh button di sini"
+            action_hewan: 
+            <ButtonInTable
+                buttonText={"Obati"}
+                size="small"
+                popupMessage={"Peternak Melakukan Pengobatan"}
+            />
         },
 
         {
@@ -48,7 +59,12 @@ const KesehatanTable = () => {
             ID_hewan: "003",
             jenis_hewan: "Ayam",
             kondisi_hewan: "Healthy",
-            action_hewan: "Taroh button di sini"
+            action_hewan: 
+            <ButtonInTable
+                buttonText={"Obati"}
+                size="small"
+                popupMessage={"Peternak Melakukan Pengobatan"}
+            />
         },
     ]
 
@@ -62,7 +78,7 @@ const KesehatanTable = () => {
             <TableBody items={rows}>
                 {(item) => (
                     <TableRow key={item.key} align="center">
-                            {(columnKey) => <TableCell className="font-inter">{getKeyValue(item, columnKey)}</TableCell>}
+                            {(columnKey) => <TableCell className="font-inter text-center">{getKeyValue(item, columnKey)}</TableCell>}
                     </TableRow>
                 )}
             </TableBody>
