@@ -71,7 +71,6 @@ const SiklusTable = (props) => {
     const siklusSapi = ["Juvenile", "Mature", "Lactation"];
     const siklusAyam = ["Juvenile", "Mature", "Egg-laying"];
 
-
     function mapRows(data){
         return data.map((currData) => {
             return {
@@ -149,9 +148,9 @@ const SiklusTable = (props) => {
 // };
 
     return (
-        <Table aria-label="Tabel Pertumbuhan Tanaman" align="center" shadow="md" isStriped>
+        <Table aria-label="Tabel Siklus Hewan" align="center" shadow="md" isStriped>
             <TableHeader columns={columns}>
-                {(column) => <TableColumn key={column.key}  className="green_gradient font-bold">{column.label}</TableColumn>}
+                    {(column) => <TableColumn key={column.key}  className="green_gradient font-bold">{column.label}</TableColumn>}
             </TableHeader>
             <TableBody items={mapRows(data)}>
                 {(item) => (
@@ -177,7 +176,7 @@ const SiklusTable = (props) => {
                 )}
             </TableBody>
         </Table>
-    )
+  )
 }
 
 export default SiklusTable
