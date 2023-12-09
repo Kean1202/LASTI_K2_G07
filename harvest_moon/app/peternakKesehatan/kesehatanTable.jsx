@@ -5,7 +5,7 @@ import React, {useEffect, useState} from "react";
 import ButtonInTable from "@/components/ButtonInTable";
 
 
-const KesehatanTable = () => {
+const KesehatanTable = (props) => {
     const [data, setData] = useState(props.dataHewan);
 
     function action(id){
