@@ -34,41 +34,11 @@ const HamaTable = (props) => {
                 <ButtonInTable
                     buttonText={"Warn"}
                     size="small"
-                    popupMessage={"Peringatan telah dikirim kepada petani penanggung jawab cluster A"}
+                    popupMessage={`Peringatan telah dikirim kepada petani penanggung jawab cluster ${currData.Cluster}`}
                 />
             }
         })
     }
-
-    const rows = [
-        {
-            key: "1",
-            cluster_tanaman: "A",
-            kondisi_hama: "Safe",
-            action_hama:
-            <ButtonInTable
-                buttonText={"Warn"}
-                size="small"
-                popupMessage={"Peringatan telah dikirim kepada petani penanggung jawab cluster A"}
-            />
-        },
-
-        {
-            key: "2",
-            cluster_tanaman: "B",
-            kondisi_hama: "Critical",
-            action_hama:
-            <ButtonInTable
-                buttonText={"Warn"}
-                size="small"
-                popupMessage={"Peringatan telah dikirim kepada petani penanggung jawab cluster B"}
-            />
-        },
-
-
-    ]
-
-	// table rows
   
     return (
         <Table aria-label="Tabel Pertumbuhan Tanaman" align="center" shadow="md" isStriped>
