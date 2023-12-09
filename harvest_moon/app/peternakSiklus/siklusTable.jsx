@@ -27,7 +27,7 @@ const SiklusTable = () => {
     const siklusSapi = ["Juvenile", "Mature", "Lactation"];
     const siklusAyam = ["Juvenile", "Mature", "Egg-laying"];
 
-    const rows = [
+    const [rows, setRows] = useState([
         {
             key: "1",
             ID_hewan: "001",
@@ -66,12 +66,28 @@ const SiklusTable = () => {
                 popupMessage={"Lakukan Produksi"}
             />
         },
-    ]
+    ])
+
+// Update siklus_hewan every 5 seconds
+useEffect(() => {
+    const timer = setInterval(() => {
+        setRows(prevRows => prevRows.map(row => ({
+            ...row,
+            siklus_hewan: row.siklus_hewan < 2 ? row.siklus_hewan + 1 : row.siklus_hewan
+        })));
+    }, 5000);
+    return () => clearInterval(timer);
+}, []);
+
+// Reset siklus_hewan to 0
+const resetSiklus = (key) => {
+    setRows(prevRows => prevRows.map(row => row.key === key ? {...row, siklus_hewan: 0} : row));
+};
 
     return (
         <Table aria-label="Tabel Pertumbuhan Tanaman" align="center" shadow="md" isStriped>
             <TableHeader columns={columns}>
-                    {(column) => <TableColumn key={column.key}  className="green_gradient font-bold">{column.label}</TableColumn>}
+                {(column) => <TableColumn key={column.key}  className="green_gradient font-bold">{column.label}</TableColumn>}
             </TableHeader>
             <TableBody items={rows}>
                 {(item) => (
@@ -79,6 +95,15 @@ const SiklusTable = () => {
                         {(columnKey) => {
                             if (columnKey === "siklus_hewan") {
                                 return <TableCell className="font-inter text-center">{item.jenis_hewan === "Sapi" ? siklusSapi[item[columnKey]] : siklusAyam[item[columnKey]]}</TableCell>;
+                            } else if (columnKey === "action_hewan") {
+                                return <TableCell className="font-inter text-center">
+                                    <ButtonInTable
+                                        buttonText={"Produksi"}
+                                        size="small"
+                                        popupMessage={"Lakukan Produksi"}
+                                        onClick={() => resetSiklus(item.key)}
+                                    />
+                                </TableCell>;
                             } else {
                                 return <TableCell className="font-inter text-center">{getKeyValue(item, columnKey)}</TableCell>;
                             }
@@ -87,7 +112,7 @@ const SiklusTable = () => {
                 )}
             </TableBody>
         </Table>
-  )
+    )
 }
 
 export default SiklusTable
