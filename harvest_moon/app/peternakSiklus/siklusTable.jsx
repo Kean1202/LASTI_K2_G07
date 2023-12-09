@@ -19,7 +19,7 @@ const SiklusTable = () => {
 			label: "SIKLUS",
 		},
         {
-            key: "action_produksi",
+            key: "action_hewan",
             label: "ACTION",
         }
 	];
@@ -33,7 +33,7 @@ const SiklusTable = () => {
             ID_hewan: "001",
             jenis_hewan: "Sapi",
             siklus_hewan: 1,
-            action_tanaman: 
+            action_hewan: 
             <ButtonInTable
                 buttonText={"Produksi"}
                 size="small"
@@ -46,7 +46,7 @@ const SiklusTable = () => {
             ID_hewan: "002",
             jenis_hewan: "Sapi",
             siklus_hewan: 0,
-            action_tanaman: 
+            action_hewan: 
             <ButtonInTable
                 buttonText={"Produksi"}
                 size="small"
@@ -59,7 +59,7 @@ const SiklusTable = () => {
             ID_hewan: "002",
             jenis_hewan: "Ayam",
             siklus_hewan: 2,
-            action_tanaman: 
+            action_hewan: 
             <ButtonInTable
                 buttonText={"Produksi"}
                 size="small"
