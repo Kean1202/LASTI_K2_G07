@@ -79,9 +79,10 @@ const KesehatanTable = (props) => {
         return data.map((currData) => {
             return {
                 key: currData.id,
+                ID_hewan : currData.id,
                 jenis_hewan: currData.jenis_hewan,
                 kondisi_hewan: currData.kondisi_hewan,
-                action_tanaman: 
+                action_hewan: 
                 <ButtonInTable
                     buttonText={"Obati"}
                     size="small"
