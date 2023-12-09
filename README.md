@@ -26,11 +26,11 @@ Berikut daftar aktor dalam layanan beserta fitur-fitur yang dapat diakses aktor 
   - Kondisi siklus produksi
 
 ### Cara Menjalankan Layanan
-1. Setelah melakukan clone repository GitHub ini dan membukanya pada code editor, misal Visual Studio Code, ketik command ini pada terminal. Pastikan Anda berada pada directory yang tepat (harvest_moon)
-   `npm install`
+1. Setelah melakukan clone repository GitHub ini dan membukanya pada code editor, misal Visual Studio Code, ketik command ini pada terminal. Pastikan Anda berada pada directory yang tepat (harvest_moon) <br/>
+   `npm install`<br/>
    Command ini akan meminta sistem menginstall seluruh reequirements yang dibutuhkan untuk menjalankan layanan
-2. Selesai melakukan penginstallan, ketik command ini pada terminal
-   `npm run dev`
+2. Selesai melakukan penginstallan, ketik command ini pada terminal<br/>
+   `npm run dev`<br/>
    Command ini akan meminta sistem menjalankan layanan
 3. Buka link yang ditampilkan pada browser
    
